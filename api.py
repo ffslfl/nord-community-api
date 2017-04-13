@@ -8,9 +8,9 @@ import datetime
 import json
 import shutil
 
-Landkreise={
-	"schleswig":[54.521868, 9.561861,"","",""],
-	"tarp":[]
+Aemter={
+	"schleswig":["","",""],
+	"oeversee":["Amt Oversee","",""]
 }
 
 path="/var/www/html/meshviewer/nord-community-api/"
@@ -38,27 +38,30 @@ for node in nodes:
                 num_nodes += 1
 
 #Knoten pro Landkreis
-Knoten_pro_Landkreis = num_nodes / len(Landkreise)
+Knoten_pro_Amt = num_nodes / len(Aemter)
 
 #Zeit holen
 thetime = datetime.datetime.now().isoformat()
 
 
-for Landkreis in Landkreise:
-	LandkreisAPI = path+Landkreis+appendix
+for Amt in Aemter:
+	AmtAPI = path+Amt+appendix
 
 	#Aus dem Original eine Datei fuer jeden Landkreis erzeugen
-	#shutil.copy2(path+'Original'+appendix,LandkreisAPI)
+	shutil.copy2(path+'Original'+appendix,AmtAPI)
 
 	#Freifunk API-Datei einladen und JSON lesen
-        slfl = None
-	with open(LandkreisAPI, 'r') as fp:
-        	ffnord = json.load(fp)
+    slfl = None
+	with open(AmtAPI, 'r') as fp:
+        	slfl = json.load(fp)
 
 	#Attribute Zeitstempel und Knotenanzahl setzen
 	slfl['state']['lastchange'] = thetime
-	slfl['state']['nodes'] = Knoten_pro_Landkreis
+	slfl['state']['nodes'] = Knoten_pro_Amt
+	slfl['location']['city'] = Aemter[Amt][0]
+	slfl['location']['lat'] = Aemter[Amt][1]
+	slfl['location']['long'] = Aemter[Amt][2]
 
 	#Freifunk API-Datein mit geaenderten werten schreiben
-	with open(LandkreisAPI, 'w') as fp:
+	with open(AmtAPI, 'w') as fp:
 		json.dump(slfl, fp, indent=2, separators=(',', ': '))
