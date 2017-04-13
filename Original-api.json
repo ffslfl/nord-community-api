@@ -1,26 +1,18 @@
 {
-  "name": "Freifunk Nord",
-  "url": "https://nord.freifunk.net",
+  "name": "Kreis Schleswig-Flensburg",
+  "url": "http://schleswig-flensburg.freifunk.net/",
   "location": {
-    "city": "Kiel",
+    "city": "Kreis Schleswig-Flensburg",
     "country": "DE",
-    "lat": 54.341749,
-    "lon": 10.125725,
-    "address": {
-      "Name": "Offene Netze Nord e.V., bei Toppoint e.V",
-      "Street": "Fraunhofer Str. 2-4",
-      "Zipcode": "24118"
-    }
+    "lat": 54.66668363044097,
+    "lon": 9.427642822265625
   },
   "contact": {
-    "email": "kontakt@ffnord.net",
-    "irc": "irc://hackint.org/ffnord",
-    "ml": "http://lists.freifunk.net/mailman/listinfo/ffnord-freifunk.net",
-    "twitter": "@FreifunkNord"
+    "email": "kontakt@ffslfl.net",
+    "twitter": "@FreifunkSLFL"
   },
   "state": {
-    "nodes": 716,
-    "description": "Freifnunk Nord ist eine Netz für die Gemeinden im nördlichen Niedersachsen und in Schleswig-Holstein, die noch zu klein sind, um eigenes Netz zu betreiben. Ziel ist die Freifunker_innen vor Ort zu Unterstützen und die Gemeinden wachsen zu sehen, bis diese groß genug sind eigene Netze zu betreiben.",
+    "nodes": 5,
     "focus": [
       "infrastructure/backbone",
       "Public Free Wifi",
@@ -28,70 +20,50 @@
       "Local services and content",
       "Free internet access"
     ],
-    "lastchange": "2016-06-05T17:46:30.045Z"
+    "lastchange": "2017-03-04T12:25:55.918Z"
   },
   "services": [
     {
-      "serviceName": "Jabber",
-      "serviceDescription": "FFNord / Hamburg Jabber Server",
-      "externalUri": "https://xmpp.ffnord.net/"
+      "serviceName": "Matrix",
+      "serviceDescription": "Matrix Server",
+      "externalUri": "http://matrix.ffslfl.net"
+    }
+  ],
+  "feeds": [
+    {
+      "name": "Kreis SL-FL Blog",
+      "category": "blog",
+      "type": "Atom",
+      "url": "http://schleswig-flensburg.freifunk.net/feed/"
     }
   ],
   "nodeMaps": [
     {
-      "url": "https://mesh.nord.freifunk.net",
+      "url": "https://map.schleswig-flensburg.freifunk.net",
       "interval": "1",
-      "technicalType": "meshviewer",
+      "technicalType": "hopglass",
       "mapType": "geographical"
     }
   ],
-  "socialprojects": {
-    "number": 5,
-    "website": "https://wiki.freifunk.net/Freifunk_Nord#Soziale_Projekte_und_Fl.C3.BCchtlingshilfe",
-    "contact": "kontakt@ffnord.net"
-  },
-  "support": {
-    "club": {
-      "name": "Offene Netze Nord e.V,",
-      "street": "Fraunhofer Str. 2-4",
-      "zip": "24118",
-      "city": "Kiel",
-      "url": "http://offenenetzenord.de/",
-      "email": "onn@offenenetzenord.de"
-    }
-  },
   "techDetails": {
     "firmware": {
       "name": "Gluon",
-      "url": "https://nord.freifunk.net/firmware.html",
-      "docs": "https://github.com/ffnord/nord-site/blob/master/CHANGELOG.md",
-      "vpnaccess": "webform",
-      "registrationurl": "https://formular.nord.freifunk.net",
-      "orgrestrictions": "PPA: http://www.picopeer.net/PPA-de.shtml\r\nMoU: https://github.com/freifunk/MoU/blob/master/FreifunkMemorandumofUnderstanding.md",
       "techrestrictions": "Gluon kompatible Hardware benötigt."
     },
     "dns": [
       {
-        "domainname": "ffnord",
-        "nameserver": [
-          "0.ntp.services.ffnord",
-          "1.ntp.services.ffnord",
-          "2.ntp.services.ffnord",
-          "3.ntp.services.ffnord",
-          "4.ntp.services.ffnord",
-          "5.ntp.services.ffnord"
-        ]
+        "domainname": "slfl"
       }
     ],
     "networks": {
       "ipv6": [
         {
-          "network": "2a03:2267:4e6f:7264::/64"
+          "network": "fd07:96ae:572e::/48"
         }
       ],
       "ipv4": [
         {
-          "network": "10.187.0.0/16"
+          "network": "10.24.32.0/19"
         }
       ]
     },
@@ -100,11 +72,10 @@
       "batman-adv"
     ],
     "updatemode": [
+      "manual",
       "autoupdate"
     ],
-    "legals": [
-      "vpninternational"
-    ]
+    "legals": []
   },
-  "api": "0.4.13"
+  "api": "0.4.14"
 }
