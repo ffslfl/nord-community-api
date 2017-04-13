@@ -48,7 +48,7 @@ for Amt in Aemter:
 	AmtAPI = path+Amt+appendix
 
 	#Aus dem Original eine Datei fuer jeden Landkreis erzeugen
-	shutil.copy2(path+'Original'+appendix,AmtAPI)
+	#shutil.copy2(path+'Original'+appendix,AmtAPI)
 
 	#Freifunk API-Datei einladen und JSON lesen
     slfl = None
