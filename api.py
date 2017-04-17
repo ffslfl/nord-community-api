@@ -7,6 +7,48 @@ import time
 import datetime
 import json
 import shutil
+import os
+import urllib
+from collections import Mapping
+
+NODELISTS_DIR = './nodelists/'
+
+# For every line in the file
+for url_raw in open('urls.txt'):
+	url = url_raw.rstrip().split(" ")
+	name = url[1] + ".json"
+
+	# Combine the name and the downloads directory to get the local filename
+	filename = os.path.join(NODELISTS_DIR, name)
+
+	# Download the file if it does not exist
+	if not os.path.isfile(filename):
+		urllib.urlretrieve(url[0], filename)
+
+nodelist = json.loads("{}");
+for url_raw in open('urls.txt'):
+	url = url_raw.rstrip().split(" ")
+	name = url[1] + ".json"
+	nodelists = None
+	with open(os.path.join(NODELISTS_DIR, name), 'r') as fp:
+		nodelists = json.load(fp)
+
+	for key, value in nodelists.iteritems():
+		if key in nodelist:
+			original_value = nodelist[key]
+			if isinstance(value, Mapping) and isinstance(original_value, Mapping):
+				merge_dicts(original_value, value)
+			elif not (isinstance(value, Mapping) or isinstance(original_value, Mapping)):
+				nodelist[key] = value
+			else:
+				raise ValueError('Attempting to merge {} with value {}'.format(key, original_value))
+		else:
+			nodelist[key] = value
+
+#Nodelist-Datei mit geaenderten werten schreiben
+with open('./nodelist.json', 'w') as fp:
+	json.dump(nodelist, fp, indent=2, separators=(',', ': '))
+
 
 Aemter={
 	"schafflund":["Amt Schafflund","54.7631344","9.1691851"],
@@ -42,7 +84,7 @@ data = json.load(f)
 nodes = data['nodes']
 
 #Zaehler mit Wert 0 anlegen
-num_nodes = 0
+num_nodes = 0.0
 
 #Fuer jeden Knoten in nodes
 for node in nodes:
@@ -77,6 +119,7 @@ for Amt in Aemter:
 	slfl['location']['city'] = Aemter[Amt][0]
 	slfl['location']['lat'] = Aemter[Amt][1]
 	slfl['location']['long'] = Aemter[Amt][2]
+	slfl['location']['name'] = "Freifunk " + Aemter[Amt][0]
 
 	#Freifunk API-Datein mit geaenderten werten schreiben
 	with open(AmtAPI, 'w') as fp:
