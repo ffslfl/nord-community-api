@@ -36,7 +36,7 @@
   },
   "state": {
     "nodes": 0,
-    "lastchange": "2017-04-17T18:40:43.443000",
+    "lastchange": "2017-04-17T18:49:25.580000",
     "focus": [
       "infrastructure/backbone",
       "Public Free Wifi",
@@ -65,7 +65,7 @@
   ],
   "nodeMaps": [
     {
-      "url": "https://map.schleswig-flensburg.freifunk.net",
+      "url": "https://map.ffslfl.net",
       "interval": "1",
       "technicalType": "hopglass",
       "mapType": "geographical"

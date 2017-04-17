@@ -39,7 +39,7 @@
   ],
   "nodeMaps": [
     {
-      "url": "https://map.schleswig-flensburg.freifunk.net",
+      "url": "https://map.ffslfl.net",
       "interval": "1",
       "technicalType": "hopglass",
       "mapType": "geographical"
