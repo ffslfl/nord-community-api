@@ -35,8 +35,8 @@
     }
   },
   "state": {
-    "nodes": 0.2222222222222222,
-    "lastchange": "2017-04-17T19:27:26.899000",
+    "nodes": 1,
+    "lastchange": "2017-04-17T19:40:29.980000",
     "focus": [
       "infrastructure/backbone",
       "Public Free Wifi",

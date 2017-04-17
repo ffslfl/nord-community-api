@@ -84,7 +84,7 @@ data = json.load(f)
 nodes = data['nodes']
 
 #Zaehler mit Wert 0 anlegen
-num_nodes = 0.0
+num_nodes = 0
 
 #Fuer jeden Knoten in nodes
 for node in nodes:
@@ -97,6 +97,8 @@ for node in nodes:
 
 #Knoten pro Landkreis
 Knoten_pro_Amt = num_nodes / len(Aemter)
+if Knoten_pro_Amt < 1:
+	Knoten_pro_Amt = 1
 
 #Zeit holen
 thetime = datetime.datetime.now().isoformat()
