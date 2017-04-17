@@ -9,47 +9,31 @@ import json
 import shutil
 
 Aemter={
-	"schafflund":["Amt Schafflund","",""],
-	"handewitt":["Gemeinde Handewitt","",""]
-	,
-	"harrislee":["Gemeinde Harrislee","",""]
-	,
-	"eggebek":["Amt Eggebek","",""]
-	,
-	"oeversee":["Amt Oversee","",""]
-	,
-	"arensharde":["Amt Arensharde","",""]
-	,
-	"schleswig":["Stadt Schleswig","",""]
-	,
-	"kropp-stapelholm":["Amt Kropp-Stapelholm","",""]
-	,
-	"haddeby":["Amt Haddeby","",""]
-	,
-	"suedangeln":["Amt Südangeln","",""]
-	,
-	"huerup":["Amt Hürup","",""]
-	,
-	"mittelangeln":["Amt Mittelangeln","",""]
-	,
-	"suederbrarup":["Amt Süderbrarup","",""]
-	,
-	"kappeln-land":["Amt Kappeln-Land","",""]
-	,
-	"kappeln":["Stadt Kappeln","",""]
-	,
-	"geltinger_bucht":["Amt Geltinger Bucht","",""]
-	,
-	"langballig":["Amt Langballig","",""]
-	,
-	"gluecksburg":["Stadt Glücksburg","",""]
+	"schafflund":["Amt Schafflund","54.7631344","9.1691851"],
+	"handewitt":["Gemeinde Handewitt","54.757954","9.327019"],
+	"harrislee":["Gemeinde Harrislee","54.811805","9.388123"],
+	"eggebek":["Amt Eggebek","54.619662","9.379866"],
+	"oeversee":["Amt Oversee","54.663209","9.401545"],
+	"arensharde":["Amt Arensharde","54.517","9.3648113"],
+	"schleswig":["Stadt Schleswig","54.523680","9.561518"],
+	"kropp-stapelholm":["Amt Kropp-Stapelholm","54.400150","9.450043"],
+	"haddeby":["Amt Haddeby","54.466693","9.566664"],
+	"suedangeln":["Amt Suedangeln","54.600174","9.566979"],
+	"huerup":["Amt Huerup","54.7542725","9.5324292"],
+	"mittelangeln":["Amt Mittelangeln","54.69458","9.60183"],
+	"suederbrarup":["Amt Suederbrarup","54.634902474251625","9.7723388671875"],
+	"kappeln-land":["Amt Kappeln-Land","54.62814577657538","9.933013916015623"],
+	"kappeln":["Stadt Kappeln","54.66310949098682","9.935760498046875"],
+	"geltinger_bucht":["Amt Geltinger Bucht","54.750440","9.900150"],
+	"langballig":["Amt Langballig","54.807276","9.640116"],
+	"gluecksburg":["Stadt Gluecksburg","54.838054","9.563276"]
 }
 
-path="/var/www/html/meshviewer/nord-community-api/"
+path="./aemter/"
 appendix="-api.json"
 
 #Datei oeffnen
-f = open('/var/www/html/meshviewer/data/nodelist.json')
+f = open('./nodelist.json')
 
 #JSON einlesen
 data = json.load(f)
@@ -80,10 +64,10 @@ for Amt in Aemter:
 	AmtAPI = path+Amt+appendix
 
 	#Aus dem Original eine Datei fuer jeden Landkreis erzeugen
-	#shutil.copy2(path+'Original'+appendix,AmtAPI)
+	shutil.copy2('./Original-api.json',AmtAPI)
 
 	#Freifunk API-Datei einladen und JSON lesen
-    slfl = None
+	slfl = None
 	with open(AmtAPI, 'r') as fp:
         	slfl = json.load(fp)
 

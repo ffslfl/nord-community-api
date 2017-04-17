@@ -1,0 +1,82 @@
+{
+  "name": "Kreis Schleswig-Flensburg",
+  "api": "0.4.14",
+  "url": "http://schleswig-flensburg.freifunk.net/",
+  "techDetails": {
+    "updatemode": [
+      "manual",
+      "autoupdate"
+    ],
+    "firmware": {
+      "name": "Gluon",
+      "techrestrictions": "Gluon kompatible Hardware ben\u00f6tigt."
+    },
+    "legals": [],
+    "routing": [
+      "802.11s",
+      "batman-adv"
+    ],
+    "dns": [
+      {
+        "domainname": "slfl"
+      }
+    ],
+    "networks": {
+      "ipv4": [
+        {
+          "network": "10.24.32.0/19"
+        }
+      ],
+      "ipv6": [
+        {
+          "network": "fd07:96ae:572e::/48"
+        }
+      ]
+    }
+  },
+  "state": {
+    "nodes": 0,
+    "lastchange": "2017-04-17T18:40:43.443000",
+    "focus": [
+      "infrastructure/backbone",
+      "Public Free Wifi",
+      "Social Community Building",
+      "Local services and content",
+      "Free internet access"
+    ]
+  },
+  "contact": {
+    "twitter": "@FreifunkSLFL",
+    "email": "kontakt@ffslfl.net"
+  },
+  "location": {
+    "lat": "54.663209",
+    "city": "Amt Oversee",
+    "lon": 9.427642822265625,
+    "long": "9.401545",
+    "country": "DE"
+  },
+  "services": [
+    {
+      "serviceName": "Matrix",
+      "externalUri": "http://matrix.ffslfl.net",
+      "serviceDescription": "Matrix Server"
+    }
+  ],
+  "nodeMaps": [
+    {
+      "url": "https://map.schleswig-flensburg.freifunk.net",
+      "interval": "1",
+      "technicalType": "hopglass",
+      "mapType": "geographical"
+    }
+  ],
+  "feeds": [
+    {
+      "category": "blog",
+      "url": "http://schleswig-flensburg.freifunk.net/feed/",
+      "type": "Atom",
+      "name": "Kreis SL-FL Blog"
+    }
+  ]
+}
