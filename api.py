@@ -9,8 +9,40 @@ import json
 import shutil
 
 Aemter={
-	"schleswig":["","",""],
+	"schafflund":["Amt Schafflund","",""],
+	"handewitt":["Gemeinde Handewitt","",""]
+	,
+	"harrislee":["Gemeinde Harrislee","",""]
+	,
+	"eggebek":["Amt Eggebek","",""]
+	,
 	"oeversee":["Amt Oversee","",""]
+	,
+	"arensharde":["Amt Arensharde","",""]
+	,
+	"schleswig":["Stadt Schleswig","",""]
+	,
+	"kropp-stapelholm":["Amt Kropp-Stapelholm","",""]
+	,
+	"haddeby":["Amt Haddeby","",""]
+	,
+	"suedangeln":["Amt Südangeln","",""]
+	,
+	"huerup":["Amt Hürup","",""]
+	,
+	"mittelangeln":["Amt Mittelangeln","",""]
+	,
+	"suederbrarup":["Amt Süderbrarup","",""]
+	,
+	"kappeln-land":["Amt Kappeln-Land","",""]
+	,
+	"kappeln":["Stadt Kappeln","",""]
+	,
+	"geltinger_bucht":["Amt Geltinger Bucht","",""]
+	,
+	"langballig":["Amt Langballig","",""]
+	,
+	"gluecksburg":["Stadt Glücksburg","",""]
 }
 
 path="/var/www/html/meshviewer/nord-community-api/"
