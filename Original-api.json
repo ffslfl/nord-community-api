@@ -39,7 +39,7 @@
   ],
   "nodeMaps": [
     {
-      "url": "https://map.ffslfl.net",
+      "url": "http://map.ffslfl.net",
       "interval": "1",
       "technicalType": "hopglass",
       "mapType": "geographical"
