@@ -40,9 +40,15 @@
   "nodeMaps": [
     {
       "url": "http://map.ffslfl.net",
-      "interval": "1",
+      "interval": "1min",
       "technicalType": "hopglass",
       "mapType": "geographical"
+    },
+    {
+      "url": "http://map.ffslfl.net/data/nodelist.json",
+      "interval": "1min",
+      "technicalType": "nodelist",
+      "mapType": "list/status"
     }
   ],
   "techDetails": {
