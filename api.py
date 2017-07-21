@@ -119,8 +119,8 @@ for Amt in Aemter:
 	slfl['state']['lastchange'] = thetime
 	slfl['state']['nodes'] = Knoten_pro_Amt
 	slfl['location']['city'] = Aemter[Amt][0]
-	slfl['location']['lat'] = Aemter[Amt][1]
-	slfl['location']['long'] = Aemter[Amt][2]
+	slfl['location']['lat'] = float(Aemter[Amt][1])
+	slfl['location']['lon'] = float(Aemter[Amt][2])
 	slfl['location']['name'] = "Freifunk " + Aemter[Amt][0]
 
 	#Freifunk API-Datein mit geaenderten werten schreiben

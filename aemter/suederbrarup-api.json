@@ -36,7 +36,7 @@
   },
   "state": {
     "nodes": 1,
-    "lastchange": "2017-07-21T16:02:10.194009",
+    "lastchange": "2017-07-21T18:47:21.356821",
     "focus": [
       "infrastructure/backbone",
       "Public Free Wifi",
@@ -50,12 +50,11 @@
     "email": "kontakt@ffslfl.net"
   },
   "location": {
+    "lat": 54.634902474251625,
     "city": "Amt Suederbrarup",
+    "lon": 9.7723388671875,
     "name": "Freifunk Amt Suederbrarup",
-    "country": "DE",
-    "lon": 9.427642822265625,
-    "long": "9.7723388671875",
-    "lat": "54.634902474251625"
+    "country": "DE"
   },
   "metacommunity": "Freifunk Schleswig-Flensburg",
   "services": [

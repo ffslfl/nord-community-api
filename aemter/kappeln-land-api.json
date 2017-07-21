@@ -36,7 +36,7 @@
   },
   "state": {
     "nodes": 1,
-    "lastchange": "2017-07-21T16:02:10.194009",
+    "lastchange": "2017-07-21T18:47:21.356821",
     "focus": [
       "infrastructure/backbone",
       "Public Free Wifi",
@@ -50,12 +50,11 @@
     "email": "kontakt@ffslfl.net"
   },
   "location": {
+    "lat": 54.62814577657538,
     "city": "Amt Kappeln-Land",
+    "lon": 9.933013916015623,
     "name": "Freifunk Amt Kappeln-Land",
-    "country": "DE",
-    "lon": 9.427642822265625,
-    "long": "9.933013916015623",
-    "lat": "54.62814577657538"
+    "country": "DE"
   },
   "metacommunity": "Freifunk Schleswig-Flensburg",
   "services": [

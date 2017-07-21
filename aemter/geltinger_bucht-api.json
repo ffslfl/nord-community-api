@@ -36,7 +36,7 @@
   },
   "state": {
     "nodes": 1,
-    "lastchange": "2017-07-21T16:02:10.194009",
+    "lastchange": "2017-07-21T18:47:21.356821",
     "focus": [
       "infrastructure/backbone",
       "Public Free Wifi",
@@ -50,12 +50,11 @@
     "email": "kontakt@ffslfl.net"
   },
   "location": {
+    "lat": 54.75044,
     "city": "Amt Geltinger Bucht",
+    "lon": 9.90015,
     "name": "Freifunk Amt Geltinger Bucht",
-    "country": "DE",
-    "lon": 9.427642822265625,
-    "long": "9.900150",
-    "lat": "54.750440"
+    "country": "DE"
   },
   "metacommunity": "Freifunk Schleswig-Flensburg",
   "services": [

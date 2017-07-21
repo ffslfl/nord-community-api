@@ -36,7 +36,7 @@
   },
   "state": {
     "nodes": 1,
-    "lastchange": "2017-07-21T16:02:10.194009",
+    "lastchange": "2017-07-21T18:47:21.356821",
     "focus": [
       "infrastructure/backbone",
       "Public Free Wifi",
@@ -50,12 +50,11 @@
     "email": "kontakt@ffslfl.net"
   },
   "location": {
+    "lat": 54.7542725,
     "city": "Amt Huerup",
+    "lon": 9.5324292,
     "name": "Freifunk Amt Huerup",
-    "country": "DE",
-    "lon": 9.427642822265625,
-    "long": "9.5324292",
-    "lat": "54.7542725"
+    "country": "DE"
   },
   "metacommunity": "Freifunk Schleswig-Flensburg",
   "services": [
