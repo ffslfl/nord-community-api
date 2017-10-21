@@ -1,6 +1,6 @@
 {
   "name": "Kreis Schleswig-Flensburg",
-  "url": "http://schleswig-flensburg.freifunk.net/",
+  "url": "https://schleswig-flensburg.freifunk.net/",
   "location": {
     "city": "Kreis Schleswig-Flensburg",
     "country": "DE",
@@ -26,7 +26,7 @@
     {
       "serviceName": "Matrix",
       "serviceDescription": "Matrix Server",
-      "externalUri": "http://matrix.ffslfl.net"
+      "externalUri": "https://matrix.ffslfl.net"
     }
   ],
   "feeds": [
@@ -34,7 +34,7 @@
       "name": "Kreis SL-FL Blog",
       "category": "blog",
       "type": "Atom",
-      "url": "http://schleswig-flensburg.freifunk.net/feed/"
+      "url": "https://schleswig-flensburg.freifunk.net/feed/"
     }
   ],
   "nodeMaps": [
@@ -45,7 +45,19 @@
       "mapType": "geographical"
     },
     {
-      "url": "http://map.ffslfl.net/data/nodelist.json",
+      "url": "https://gw1.ffslfl.net/data/nodelist.json",
+      "interval": "1min",
+      "technicalType": "nodelist",
+      "mapType": "list/status"
+    },
+    {
+      "url": "https://gw3.ffslfl.net/data/nodelist.json",
+      "interval": "1min",
+      "technicalType": "nodelist",
+      "mapType": "list/status"
+    },
+    {
+      "url": "https://gw5.ffslfl.net/data/nodelist.json",
       "interval": "1min",
       "technicalType": "nodelist",
       "mapType": "list/status"
