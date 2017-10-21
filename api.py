@@ -87,7 +87,7 @@ data = json.load(f)
 nodes = data['nodes']
 
 #Zaehler mit Wert 0 anlegen
-num_nodes = 0
+num_nodes = 0.0
 
 #Fuer jeden Knoten in nodes
 for node in nodes:
@@ -99,7 +99,7 @@ for node in nodes:
                 num_nodes += 1
 
 #Knoten pro Landkreis
-Knoten_pro_Amt = num_nodes / len(Aemter)
+Knoten_pro_Amt = int(round(num_nodes / len(Aemter),0))
 if Knoten_pro_Amt < 1:
 	Knoten_pro_Amt = 1
 
