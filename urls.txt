@@ -1,1 +1,3 @@
-http://map.ffslfl.net/data/nodelist.json gw1
+https://gw1.ffslfl.net/data/nodelist.json gw1
+https://gw3.ffslfl.net/data/nodelist.json gw3
+https://gw5.ffslfl.net/data/nodelist.json gw5
