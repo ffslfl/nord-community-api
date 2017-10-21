@@ -21,9 +21,8 @@ for url_raw in open('urls.txt'):
 	# Combine the name and the downloads directory to get the local filename
 	filename = os.path.join(NODELISTS_DIR, name)
 
-	# Download the file if it does not exist
-	if not os.path.isfile(filename):
-		urllib.urlretrieve(url[0], filename)
+	# Download the files
+	urllib.urlretrieve(url[0], filename)
 
 nodelist = json.loads("{}");
 for url_raw in open('urls.txt'):
@@ -39,8 +38,12 @@ for url_raw in open('urls.txt'):
 			if isinstance(value, Mapping) and isinstance(original_value, Mapping):
 				merge_dicts(original_value, value)
 			elif not (isinstance(value, Mapping) or isinstance(original_value, Mapping)):
-				nodelist[key] = value
+				if type(value) is list:
+					nodelist[key] = original_value + value
+				else:
+                        	        nodelist[key] = value
 			else:
+				print("raise")
 				raise ValueError('Attempting to merge {} with value {}'.format(key, original_value))
 		else:
 			nodelist[key] = value

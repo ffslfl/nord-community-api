@@ -1,7 +1,7 @@
 {
   "name": "Kreis Schleswig-Flensburg",
   "api": "0.4.14",
-  "url": "http://schleswig-flensburg.freifunk.net/",
+  "url": "https://schleswig-flensburg.freifunk.net/",
   "techDetails": {
     "updatemode": [
       "manual",
@@ -36,7 +36,7 @@
   },
   "state": {
     "nodes": 1,
-    "lastchange": "2017-07-21T18:47:21.356821",
+    "lastchange": "2017-10-21T13:22:44.079412",
     "focus": [
       "infrastructure/backbone",
       "Public Free Wifi",
@@ -60,7 +60,7 @@
   "services": [
     {
       "serviceName": "Matrix",
-      "externalUri": "http://matrix.ffslfl.net",
+      "externalUri": "https://matrix.ffslfl.net",
       "serviceDescription": "Matrix Server"
     }
   ],
@@ -72,7 +72,19 @@
       "mapType": "geographical"
     },
     {
-      "url": "http://map.ffslfl.net/data/nodelist.json",
+      "url": "https://gw1.ffslfl.net/data/nodelist.json",
+      "interval": "1min",
+      "technicalType": "nodelist",
+      "mapType": "list/status"
+    },
+    {
+      "url": "https://gw3.ffslfl.net/data/nodelist.json",
+      "interval": "1min",
+      "technicalType": "nodelist",
+      "mapType": "list/status"
+    },
+    {
+      "url": "https://gw5.ffslfl.net/data/nodelist.json",
       "interval": "1min",
       "technicalType": "nodelist",
       "mapType": "list/status"
@@ -81,7 +93,7 @@
   "feeds": [
     {
       "category": "blog",
-      "url": "http://schleswig-flensburg.freifunk.net/feed/",
+      "url": "https://schleswig-flensburg.freifunk.net/feed/",
       "type": "Atom",
       "name": "Kreis SL-FL Blog"
     }
